@@ -1,4 +1,5 @@
 PODS:
+  - LinqToObjectiveC (2.0.0)
   - ReactiveCocoa (2.4.2):
     - ReactiveCocoa/UI (= 2.4.2)
   - ReactiveCocoa/Core (2.4.2):
@@ -8,9 +9,11 @@ PODS:
     - ReactiveCocoa/Core
 
 DEPENDENCIES:
+  - LinqToObjectiveC
   - ReactiveCocoa
 
 SPEC CHECKSUMS:
+  LinqToObjectiveC: db2ceec81d45192ffe971bbd8e73ef0de614723c
   ReactiveCocoa: 8418a82b67af2f1b7587baf29c329040a23c2063
 
 COCOAPODS: 0.35.0

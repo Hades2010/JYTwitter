@@ -8,7 +8,7 @@
 
 #import "RWSearchFormViewController.h"
 #import "RWSearchResultsViewController.h"
-
+#import "RWTweet.h"
 #import <Accounts/Accounts.h>
 #import <Social/Social.h>
 
@@ -98,19 +98,26 @@ static NSString *const RWSinaInstantDomain = @"SinaInstant";
 //        NSLog(@"An error occurred :%@",error);
 //    }];
     
-    [[[[[self requestAccessToSinaSignal] then:^RACSignal *{
+    [[[[[[[self requestAccessToSinaSignal] then:^RACSignal *{
         @strongify(self)
         return self.searchText.rac_textSignal;
     }] filter:^BOOL(NSString *text) {
         @strongify(self)
         return [self isValidSearchText:text];
     }]
+       throttle:0.5]
      flattenMap:^RACStream *(NSString *text) {
          @strongify(self)
          return [self signalForSearchWithText:text];
      }]
-     subscribeNext:^(id x) {
-        NSLog(@"%@",x);
+     deliverOn:[RACScheduler mainThreadScheduler]]
+     subscribeNext:^(NSDictionary *jsonSearchResult) {
+        NSLog(@"%@",jsonSearchResult);
+         NSArray *statuses = jsonSearchResult[@"statuses"];
+         NSArray *tweets = [statuses linq_select:^id(id tweet) {
+             return [RWTweet tweetWithStatus:tweet];
+         }];
+         [self.resultViewController displayTweets:tweets];
     } error:^(NSError *error) {
         NSLog(@"An error occurred :%@",error);
     }];

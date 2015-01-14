@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>5F962F8B-18CF-4093-970B-8436749669B1</string>
+	<key>IDESourceControlProjectName</key>
+	<string>JYTwitter</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>6F01A5C3083C6EBAECDDEC564551E4264DBABAD7</key>
+		<string>https://github.com/Hades2010/JYTwitter.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>JYTwitter.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>6F01A5C3083C6EBAECDDEC564551E4264DBABAD7</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/Hades2010/JYTwitter.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>6F01A5C3083C6EBAECDDEC564551E4264DBABAD7</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>6F01A5C3083C6EBAECDDEC564551E4264DBABAD7</string>
+			<key>IDESourceControlWCCName</key>
+			<string>JYTwitter</string>
+		</dict>
+	</array>
+</dict>
+</plist>
